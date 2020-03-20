@@ -47,7 +47,8 @@ namespace litews
             {
                 if (req.Accept == null) break;
                 //var isContain = req.Accept.Select(x => x.Contains(single.HandleType) == true).Where(y => y == true).FirstOrDefault();
-                var isContain= req.Accept.Select(x => single.HandleType.Split(',').Select(y => x.Contains(y) == true).FirstOrDefault()).FirstOrDefault();
+                //var isContain= req.Accept.Select(x => single.HandleType.Split(',').Select(y => x.Contains(y) == true).FirstOrDefault()).FirstOrDefault();
+                var isContain = req.Accept.Select(x => single.HandleType.Split(',').Select(y => x.Contains(y)).Where(y => y == true).FirstOrDefault()).Where(x => x == true).FirstOrDefault();
                 if (isContain)
                 {
                     var response = single.GenerateResponse(ServerPath, req);
