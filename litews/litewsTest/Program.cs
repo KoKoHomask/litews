@@ -20,7 +20,6 @@ namespace litewsTest
             Server server = new Server(iPAddress, Port, RootPath);
             server.SuperList.Add(new RequestTextHandle());
             server.SuperList.Add(new RequextImgHandle());
-            server.SuperList.Add(new RequestJsonHandle());
             server.Start();
             while (server.IsWork)
             {

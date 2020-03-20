@@ -12,7 +12,7 @@ namespace litewsTest
     public class RequestTextHandle : IRequestHandle
     {
         protected string sMimeType = "text/";
-        public string HandleType { get; } = "text/html";
+        public string HandleType { get; } = "text/html,application/json";
         public RequestTextHandle()
         {
 
