@@ -3,3 +3,10 @@
 ################################################################################
 
 *.suo
+*.sqlite
+/.vs
+/litews/.vs/litews
+/litews/litews/bin/Debug/netstandard2.0
+/litews/litews/obj
+/litews/litewsTest/bin/Debug/netcoreapp3.1
+/litews/litewsTest/obj
